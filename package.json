@@ -1,0 +1,19 @@
+{
+  "name": "meow",
+  "version": "1.0.0",
+  "description": "meow1",
+  "main": "dashboard.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deargosep/meowland.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deargosep/meowland/issues"
+  },
+  "homepage": "https://github.com/deargosep/meowland#readme"
+}

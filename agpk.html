@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <title>Main page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    @font-face {
+    font-family: "PT Sans Caption";
+    src: url("PT_Sans_Caption/PTSansCaption-Regular.ttf") format("opentype"),
+        url("PT_Sans_Caption/PTSansCaption-Bold.ttf") format("opentype");
+    }
+    body {
+     font-family: "PT Sans Caption";
+     margin: 0;
+     }
+@media only screen and (max-width: 600px) {
+     .adres {
+     font-size:40%;
+     }
+     }
+     @media (max-width:768px) {
+     .adres {
+     font-size:115%;
+     }
+     }
+         #logo {
+    position:relative;
+    height:30%;
+    width:25%;
+    }
+    .fa {
+    top:6%;
+    left:26%;
+    font-size:55;
+    position:absolute;
+    margin-right:7%;
+    text-decoration:none;
+    }
+    .fa-instagram {
+    margin-left:6%;
+    text-decoration:none;
+    }
+    .fa-whatsapp {
+    margin-left:12%;
+    text-decoration:none;
+    }
+    .adres {
+    white-space: pre;
+    top:2%;
+    align-content:right;
+    right:4%;
+    display:block;
+    position:absolute;
+    font-size:115%;
+    }
+      nav {
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); 
+    }
+    main {
+    display: block;
+    margin-left:10%;
+    margin-right:10%;
+    }
+    #slider {
+    margin-left:0;
+    margin-right:0;
+    height:120%;
+    width:100%;
+    @media (min-width="600px") {
+    width:500%;
+    }
+    position:relative;
+    }
+    h1 {
+    text-align: center;
+    font-size: 40;
+    color:#5603a2;
+    }
+    h2 {
+    text-align: center;
+    font-size:30;
+    }
+    h3 {
+    font-size:30;
+    color:#5603a2;
+    }
+    #h0 {
+    text-align: center;
+    font-size:27;
+    color: #5603a2;
+    }
+    #h1 {
+    font-size:23;
+    text-align: center;
+    }
+    #d0 {
+    margin-right:20;
+    margin-left:0;
+    position: relative;
+    }
+    #l1 {
+    text-align:left;
+    font-size:25;
+    }
+    svg {
+    position:absolute;
+    z-index:99999;
+    }
+    #navdots {
+    position:absolute;
+    z-index:99999;
+    }
+    #jsElement {
+    text-align: right;
+    z-index:999999;
+    position: absolute;
+    color:white;
+    width:100%;
+    display:block;
+    font-size:35;
+    white-space:pre;
+    }
+    .container div{
+    display: inline-block;
+    align-content: justify;
+    }
+    .just {
+    text-align:justify;
+    }
+    .navlinks {
+    font-size: 25;
+    top:20%;
+    left:26%;
+    width:50%;
+    position:absolute;
+    }
+    #navlink0 {
+    margin-right:1%;
+    }
+    #navlink1 {
+    margin-right:1%;
+    }
+    #navlink2 {
+    margin-right:3%;
+    }
+    a {
+       text-decoration:none;
+       color:#5603a2;
+       }
+       
+    </style>
+  </head>
+  <!-- используй же силу, что изучил за всё время -->
+  <body>
+  <nav>
+  <img id="logo" src="https://agpk.kz/images/02.png" alt="лого"/> 
+  <a class="fa fa-youtube" href="https://www.youtube.com/channel/UC0mlIq6b97sX5vfWLpEWdPA?view_as=subscriber"> </a>
+  <a class="fa fa-instagram" href="https://www.instagram.com/polytechalmaty"> </a>
+  <a class="fa fa-whatsapp" href="https://wa.me/+77757054525"> </a>
+  <div class="navlinks"> 
+  <a  id="navlink0" href="https://agpk.kz/meet.php"> Об АГПК </a>
+  <a id="navlink1" href="https://agpk.kz/table.php">Список поступающих </a> 
+  <a id="navlink2" href="https://agpk.kz/pravilapriema.php"> FAQ </a>
+  </div>
+  <div class="adres">
+Казахстан, г. Алматы,   Тел.:+7(727)393 39 52
+мкрн. Тастак 1, д. 1В   Моб.:+7(775)705 45 25
+  </div>
+  </nav>
+  <p id="jsElement"> 
+  
+  
+  
+  Начни свой путь высококвалифицированного
+  специалиста с одного из 
+  ТОП-10 колледжей Алматы </p>
+  <img src="https://agpk.kz/images/code1.jpg" id="slider" />
+
+  <script>
+
+var texts=["\n \n \n \n  Начни свой путь высококвалифицированного \n специалиста с одного из \n ТОП-10 колледжей Алматы", "\n \n \n \n'Программируй успех - \n поступай в Политех'", "\n \n \n \nНаше будущее за грамотными и \n квалифицированными специалистами, \n ты можешь стать одним из них!"];
+
+  var textc=document.getElementById("jsElement");
+var images=[
+    "https://agpk.kz/images/code1.jpg",
+    "https://agpk.kz/images/code2.jpg",
+    "https://agpk.kz/images/code3.jpg"
+    ];
+var num=0;
+function firstpic() {
+var slider=document.getElementById("slider");
+slider.src=images[0];
+}
+function secondpic() {
+var slider=document.getElementById("slider");
+slider.src=images[1];
+}
+function thirdpic() {
+var slider=document.getElementById("slider");
+slider.src=images[2];
+}
+setInterval(next, 6000);
+function next() {
+var slider=document.getElementById("slider")
+num++;
+if(num>=images.length) {
+num=0; }
+slider.src=images[num];
+textc.innerHTML=texts[num];
+}
+</script>
+<!--<div id="navdots">
+  <svg id="navdots" width="270" height="230">
+  <div onclick="firstpic()">
+  <circle id="navdots" ="25" cy="195" r="5" fill="gray" /> </div>
+  <div onclick="secondpic()">
+    <circle id="navdots" cx="25" cy="210" r="5" fill="gray" /> </div>
+       <div onclick="thirdpic()">
+       <circle id="navdots" cx="25" cy="225" r="5" fill="gray" /> </div>
+</div>
+</svg> -->
+  <main>
+  <br />
+  <h1> <b>Алматинский Государственный Политехнический Колледж</b> </h1>
+  <h2> Поступай к нам! </h2>
+  <br />
+  <h3 id="h0" align="center"><b> НАШИ СПЕЦИАЛЬНОСТИ </b></h3>
+<div class="container">
+    <div align="center"><img src="https://agpk.kz/images/specialty/1-4.png" alt="Вычислительная техника" width="270" height="250"> <br /> 1304000 <br /> Вычислительная техника и <br /> программное обеспечение</div>
+    <div align="center"><img src="https://agpk.kz/images/specialty/2-1.png" alt="Информационные системы" width="270" height="250"> <br /> 1305000 <br /> Информационные системы </div>
+    <div align="center"><img src="https://agpk.kz/images/specialty/3-1.png" alt="Радиоэлектроника и связь" width="270" height="250"> <br /> 1306000 <br /> Радиоэлектроника и связь</div>
+    <div align="center"><img src="https://agpk.kz/images/specialty/4-1.png" alt="Учет и аудит" width="270" height="250"> <br />  0518000 <br /> Учет и аудит 
+    </div>
+    <div align="center"><img src="https://agpk.kz/images/specialty/5-1.png" alt="Механообработка, контрольно-измерительные приборы и автоматика в промышленности" width="270" height="270"> <br /> 1013000 <br /> 
+Механообработка, контрольно-измерительные <br /> приборы и автоматика <br /> в промышленности </div>
+    <div align="center"><img src="https://agpk.kz/images/specialty/6-1.png" alt="Технология машинопостроения" width="270" height="250"> <br />  1014000 <br /> Технология <br /> машинопостроения </div>
+      <div align="center"><img src="https://agpk.kz/images/specialty/7-2.png" alt="Эксплуатация автоматизированных систем связи" width="270" height="250"> <br />1308000 <br /> Эксплуатация <br /> автоматизированных <br /> систем связи
+</div>
+<p />
+<h4 id="h0"><b> МИССИЯ КОЛЛЕДЖА: </b></h4>
+<div class="just"> Подготовка высококвалифицированного специалиста с лидерскими качествами, ориентированного на компетентный подход в своей избранной профессиональной деятельности в условиях меняющихся потребностей рынка труда. </div>
+
+<div class="container">
+    <div id="d0" align="center"><img src="https://agpk.kz/images/feat/1.png" width="180" height="150"> <h5 id="h1">Международные<br />сертификаты </h5> <br /> Получи в <br /> дополнение государственному <br />диплому сертификаты <br /> Microsoft, Adobe, <br /> Autodesk, Apple <br />и другие.</div>
+    <div id="d0" align="center"><img src="https://agpk.kz/images/feat/2.png" width="180" height="150"> <h6 id="h1">Преподаватели- <br />практики  </h6> <br /> Благодаря наставникам <br />студенты всегда в курсе, <br /> как всё бывает не <br /> в учебниках, а в жизни.</div>
+    <div id="d0" align="center"><img src="https://agpk.kz/images/feat/3.png" width="180" height="150"> <h7 id="h1"> <br />Яркая <br />студенческая <br />жизнь </h7> <br /> Успеваем и учиться, и <br />отдыхать: ездим на хакатоны <br />и конференции, устраиваем вечеринки <br />и проводим игровые турниры. </div>
+    <div id="d0" align="center"><img src="https://agpk.kz/images/feat/4.png" width="180" height="150"> <h8 id="h1"><br /> Проектное <br /> обучение </h8> <br /> В конце семестра <br /> с тебя спросят не <br /> реферат, а готовый проект — сайт, <br /> бизнес-план, рекламную кампанию.<br />Практика является средством повышения <br />профессиональной компетенции. </div>
+    <div id="d0" align="center"><img src="https://agpk.kz/images/feat/5.png" width="180" height="150"> <h9 id="h1"><br /> Стажировки в <br /> IT- компаниях </h9> <br /> Со 2 курса — обязательная <br />практика. С 3 Kypca многие студенты <br />уже работают или стажируются <br />в IT- компаниях. </div>
+  </main>
+  </body>
+</html>

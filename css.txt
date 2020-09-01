@@ -1,0 +1,15 @@
+text-align это контроль над текстом (вместо простого align)
+center, justify, left, right и inherit. inherit это относительно родителя
+content-align это для контента не текста
+ttf это opentype
+@font-face {
+font-family: "";
+src: url(""),
+     url("");
+     }
+это как вставлять всякие файлы шрифтов
+font-size размер
+agpk.kz/images/02.png лого
+https://agpk.kz/images/code3.jpg с главной страницы
+для ручных перебросов на новую строку и всё такое используем white-space: pre;
+#5603a2 цвет пурпурный

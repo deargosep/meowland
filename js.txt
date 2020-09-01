@@ -1,0 +1,778 @@
+js это html+cpp
+
+<script> можно разместить в <body> или <head>
+после каждой строчки ; как в c++
+document.write("TEXT"); текст
+document.write(x); отобразить переменную
+alert("TEXT"); всплывающая херь
+Можно создать новый .js файл и вписать туда чистый код js без <script>
+<script src=".js">
+//комментарии
+/* многострочный коммент
+ * арий */
+var x = 1 / y значит x это 1 / y это x
+Правила наименования:
+- Первым символом должна быть буква, нижнее подчеркивание (_), или знак доллара ($). Последующими символами могут быть буквы, цифры, нижние подчеркивания или знаки доллара.
+- Писать числа первым символом не разрешено.
+- Имена переменных не могут содержать математические или логические операторы в имени. Например, 2*something или this+that;
+- Имена переменных JavaScript не могут содержать пробелы.
+
+var='""' or "''"
+для специальных символов используется \ перед символом. \' \" 
+\\ обратный  слеш
+\n новая строка
+\r возврат каретки
+\t табуляция
+\b бэкспейс
+\f прогон страницы
+
+типы данных
+number=1
+strng="text some text"
+bool=true/false
+1=без дробной части decimals
+1.11=с дробной частью
+
+% оставляет остаток
+== сравнивает, равно ли
+=== идентичность
+! не
+<= меньше или равно
+< меньше
+booleans:
+&& true если да да
+|| true если нет да/да нет
+! true если да false если нет
+(4>2) && (10<15) outputs "true"
+var isAdult=(age<18)? "Too young": "Old enough"
+var= (1==2)? "false1": "true2"  замена if?
+
+var string1="meow";
+var string2="purr";
+document.write(string1+string2);
+output:
+meow purr
+
+if (1<2) {alert("0"); }         if и 
+else {alert("3");}              else
+
+else if (2>3) {alert("4")}      else if
+else обязателен в конце.
+
+var day=2;                                   
+switch (day) {                               использование switch
+case 1:
+    document.write("Monday");
+    break;
+case 7:
+    document.write("Sunday");
+    break;
+default:                                     в случае непредвиденного:
+    document.write("Another day");
+}
+
+
+циклы
+for
+
+for (statement 1; statement 2; statement 3) {
+    code block to be executed
+}
+statement 1 (выражение) выполняется до запуска цикла (code block)
+statement 2             определяет условие для запуска цикла
+statement 3             выполняется каждый раз после выполнения цикла.
+
+В нижеуказанном примере создается цикл for, который выводит числа от 1 до 5.
+for (i=1; i<=5; i++) {
+   document.write(i + "<br />");
+}
+В этом примере, Выражение 1 устанавливает переменную до запуска цикла (var i = 1).
+Выражение 2 определяет условие для запуска цикла (i должно быть меньше либо равно 5).
+Выражение 3 увеличивает значение (i++) после каждого выполнения блока кода в цикле.
+
+for (a=2; a<=6; a++) {document.write(a+ "<br />");
+}
+
+вывод чётных чисел до 20 
+var x=0;
+for ((тут мы опустили первое выражение); x<=20; x+=1 (добавляет по одному пока не будет 20);)
+{ 
+document.write(x);
+}
+
+while
+while (condition) {             вспоминаем boolean с true or false
+code block
+}
+                                облегченная версия for
+var i=0;
+while (i<=10) {
+    document.write(i+ "<br />");  
+    i++
+    }
+убедитесь, что условие в итоге станет ложным, иначе луп
+
+do
+                                        цикл do..while - вариация while. цикл выполнит блок кода один раз до проверки, затем цикл будет повторяться, пока условие истинно. цель: выбить всё в ложь.
+do {
+code block
+}
+while (condition);
+
+ex:
+var i=20;
+do {
+    document.write(i+"<br />");
+    i++
+}
+while (i<=25);
+
+будут выведены числа от 20 до 25
+
+break
+выражение break "выпрыгивает" из цикла и продолжает выполнение с кода после цикла
+for (i=0; i <=1-; i++) {
+if (i==5) {
+    break;
+    }
+    document.write(i+"<br />");
+}
+
+continue
+
+выражение continue останавливает только одну итерацию в цикле и продолжает со следующей итерации.
+for (i=0; i<=10; i++) {
+if (i==5) {                                                     if в for для continue (и break)
+    continue;
+    }
+    document.write(i+"<br />");
+}
+output:
+0 
+1
+2
+3
+4
+6                                                               пропущена одна  строка
+7
+8
+9
+10
+
+
+
+
+
+
+
+
+Функции
+
+STORAGE API
+-sessionStorage() данные одноразовые
+-localStorage() данные без ограничения по времени. хранилище
+Сохранить значения (js)
+localStorage.setItem("key1", "value1"); ключ первый (приватность?) значение второе
+Показать
+alert(localStorage.getItem("key1"));
+Удаление значения
+localStorage.removeItem("key1");
+Очистка
+localStorage.clear()
+
+GPS API
+navigator.geolocation.getCurrentPosition();
+параметры showLocation получает инфу о местоположении
+ErrorHandler действует при ошибке
+Options параметры получения инфы
+
+function name() {                                   создание своей функции
+code block for execution
+}
+function myFunction() {
+    alert("Calling a Function!");                   создание своей функции
+}
+
+myFunction();                                       вызов функции (ещё можно использовать myFunction.call())
+
+
+myFunction(name);                   внутрь скобок можно вставить параметры
+alert(name+"" или ""+name);
+        затем
+myFunction(deargo);
+и параметр будет использоваться. можно несколько, через запятые (x,y)
+
+function sayHello(name, age) {
+  document.write( name + " is " + age + " years old.");
+}
+
+sayHello("John", 20)
+//Outputs "John is 20 years old."
+
+
+return
+return возвращает значение функции
+полезно при вычислении
+то есть использует и бросает/возвращает
+
+окна
+
+alert(); показывает окно с текстом и "ok"
+prompt
+            окно для ввода пользователем данных
+var user=prompt("your name?");                  что то наподобие  создания функций
+alert(user);                                    вызов "функции" с промптом внутри
+
+confirm
+var meow=confirm("leaveordie")
+if (meow == true) {
+    alert("ok live.");
+}
+else {
+ alert("ok die.");
+}
+
+Объекты
+
+var person = {                          контейнер значений:имя,возраст и тд. Много в одном для будущего использования
+ name: "John", age: 31, 
+ favColor: "green", height: 183
+};
+
+    Получить свойства объектов
+objectName.propertyName
+objectName['propertyName']
+
+var person = {
+ name: "John", age: 31, 
+ favColor: "green", height: 183
+};
+var x=person.age                  <-- (objectName.propertyName)
+var y=person['age']                     objectName['propertyName']
+
+length
+var course={name:"JS", lessons:41};
+document.write(course.name.length);         показывает длину символов в name
+//outputs 2
+
+Методы объектов
+
+objectName.methodName()         объект и метод.
+document.write()        write также является методом объекта document
+
+this                                        функция-конструктор
+function person(name, age, color) {         this ссылается на текущий объект под скобками
+    this.name=name;
+    this.age=age;
+    this.favColor=color;
+}
+//мы создали конструктор объектов!
+var p1=new person("John", 42, "green");         ключевое слово "new" для нового
+var p2=new person("Amy", 21, "red");
+
+document.write(p1.age) //outputs 42
+document.write(p2.name) //outputs "Amy"
+p1 теперь Джон, p2 теперь Эми под объектом person. удобно.
+var John={name:"John", age:25};     строчное и удобное создание объектов
+
+
+Массивы
+когда у нас много параметров в функции, используем Array
+var courses= new Array("HTML","CSS","JS");
+3 [3]
+document.write(courses[2]);
+//outputs JS    0,1,2  а не 1,2,3
+else undefined          
+
+можно даже так:
+var courses=new Array();
+courses[0]="HTML";
+courses[1]="CSS";
+courses[2]="JS";
+courses[3]="C++";
+
+или var courses=["HTML","CSS","JS"]
+
+
+Math
+document.write(Math.Pi);        выводит 3.14.... . Математический объект
+Math.E
+
+Math.abs(x) абсолютное значение x
+acos(x)  возвращает арккосинус x в радианах
+asin(x) арксинус числа x в радианах
+atan(x) арктангенс от x в радианах
+atan2(y,x) арктангенс от частного (деление) своих аргументов
+ceil(x)  наименьшее/большее целое число, либо равное x
+cos(x)  косинус x в радианах            |
+exp(x)  e в степень x                   |
+floor(x) наибольшее/меньшее целое число, либо равное x
+log(x) возвращает логарифм
+max(x,y,z,...,n) наибольшее из чисел
+min(x,y,z....,n) наименьшее из чисел
+pow(x,y) степень в y
+random() случайное
+round(x) округлить
+sin(x) синус
+sqrt(x) квадратный корень
+tan(x) тангенс
+
+создать калькулятор через alert
+var n=prompt("enter a number(n)", "");
+var answer=Math.sqrt(n);
+alert("Квадратный корень " +n+ "это "+ answer);
+
+Date
+
+setInterval()       вызывает функцию после того как пройдет время в скобках в милисекундах
+function MyAlert() {
+alert("Hi");
+}
+setInterval(MyAlert, 3000);     вызывает MyAlert каждые 3 секунды
+    1000мс=1секунда
+    60000мс=1минута
+    3600000мс=1час
+очистить можно через clearInterval(имя интервала)
+var myInterval=setInterval(MyAlert,3000);   надо указать имя
+clearInterval(myInterval);
+
+Date - даты
+var d=new Date();
+d содержит текущую дату и время
+var day=d.getDays();
+var h=d.getHours();
+document.write(day);    вывод
+
+Выборка Элементов
+
+document.getElementById(id)      ищет элемент по id
+document.getElementsByClassName(name) ищет по имени класса
+document.getElementByTagName(name)    ищет по имени тэга
+
+var elem=document.getElementById("demo")
+elem.innerHTML="Hello World!";      
+Всё это для правки HTML кода, то есть за пределами <script>
+
+var ob=document.getElementById("text");
+ob.innerHTML="Hi";                      здесь мы выбрали все элементы с id text
+                                            и поменяли на Hi с помощью innerHTML
+id можно указать в <id="">
+
+<p>hi</p>
+<p>hello</p>
+<p>hi</p>
+<script>
+var arr = document.getElementsByTagName("p");
+for (var x = 0; x < arr.length; x++) {
+  arr[x].innerHTML = "Hi there";
+}
+</script>
+//outputs
+<p>Hi there</p>
+<p>Hi there</p>
+<p>Hi there</p>
+    мы заменили все <p>
+
+
+Каждый элемент объектной модели DOM имеет набор свойств и методов, которые предоставляют информацию о их отношениях в объектной модели DOM:
+element.childNodes возвращает дочерние узлы элемента.
+element.firstChild возвращает первый дочерний узел элемента.
+element.lastChild возвращает последний дочерний узел элемента.
+element.hasChildNodes возвращает верно(true), если у элемента есть дочерний узел, иначе возвращает ложь(false).
+element.nextSibling возвращает следующий узел на одном уровне дерева.
+element.previousSibling возвращает предыдущий узел на одном уровне дерева.
+element.parentNode возвращает родительский узел элемента.
+
+Мы можем, например, выбрать все дочерние узлы элемента и изменить их содержимое:
+    <div id ="demo">        указан id demo
+      <p>some text</p>
+      <p>some other text</p>
+    </div>
+<script>
+     var a = document.getElementById("demo");
+     var arr = a.childNodes;
+     for(var x=0;x<arr.length;x++) {
+       arr[x].innerHTML = "new text";       все дочерние узлы <div> (<p>) поменяны на
+                                                new text
+     }
+</script>
+
+Также можно Изменение Атрибутов
+<img id="myimg" src="orange.png" alt="" />              мы поменяли атрибут тега с id myimg с src="orange.png" на src="apple.png"
+<script>
+var el=document.getElementById("myimg");
+el.src="apple.png";
+</script>
+
+
+Изменение Стиля (aka css)
+
+<div id="demo" style="width:200px">some text</div>
+<script>
+  var x = document.getElementById("demo");          мы изменили цвет и ширину текста в <div>
+  x.style.color = "6600FF";
+  x.style.width = "100px";
+</script>
+
+Дефисы не работают. нужно использовать вместо background-color backgroundColor (camelCase)
+
+Создаем Элементы
+
+element.cloneNode() возвращает дубликат узла из которого этот метод был вызван
+document.createElement(element) создает новый узел элемента
+document.createTextNode(text) создает новый текстовый узел
+
+  <div id="demo">
+  <script>
+  var par=document.createElement("par");    //создание параграфа
+  var node=document.createTextNode("some text"); //
+  par.appendChild(node)                     //вызов функции | добавление текста к параграфу
+  var div=document.getElementById("demo");  //adding new paragraph to <div> (tag with id "demo") | функция
+  div.appendChild(par);                     //вызов функции
+  </script>
+  </div>
+  
+  var el = document. createElement ("V);  
+var txt = document.createTextNode("B");  
+el.appendChild(txt); 
+var ul = document. getElementByld ("list"); ul. appendChild (el); 
+ul. appendChild (el); //ul это переменная
+
+Удаление Элементов
+Чтобы убрать HTML элемент, вам необходимо выбрать родителя элемента и использовать метод removeChild(node).
+
+﻿var el = document. createElement ("V);  
+var txt = document.createTextNode("B");  
+el.appendChild(txt); 
+var ul = document. getElementByld ("list"); ul. appendChild (el); 
+ul. appendChild (el);
+<div id="demo">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var parent = document.getElementById("demo");
+var child = document.getElementById("p1");
+parent.removeChild(child); //собственно само удаление узла
+</script>
+Таким образом удаляется параграф с id p1
+
+Замещение Элементов
+parent.replaceChild(newNode, oldNode); новое дитя, старое дитя в параметрах. просто
+
+
+Анимации
+                                делаем анимацию ползунка
+<head>
+    <style>
+    body {
+    background-color: #3b444b;
+    color: white;
+    }
+    #container {
+    width: 200px;               Создаём  коробку с ползунком box
+    height:200px;
+    background: green;
+    position: relative;         поозиция для относительности
+    }
+    #box {                      квадрат
+     width:70px;
+    height:5px;
+    background: cyan;
+    position: absolute;         пооозиция для просто независимого стояния
+    }
+    </style>
+    </head>
+    <body>
+    <div id="container">        создаём id
+    <div id="box"> </div>       id
+    </div>
+<script>
+    var t=setInterval(move, 10);    интервал перемещения (можно добавить /60 чтобы сделать 60фпс)
+    var posX=0;                     ось X
+    var posY=0;                     ось Y
+    var box=document.getElementById("box");  делаем переменную из id
+    function move() {
+    if (posX>=0 && posX<130 && posY==0) {
+    posX+=1;                           двигаем вправо по одному пока не доходим до 130 пикселя
+    }
+    else if (posX==130 && posY==0) {
+    posX+=65;                           добавляем недостающие пиксели до 195 (потому что ширина 5 пикс)
+    box.style.width="5px";              переворачиваем ползунок
+    box.style.height="70px";
+    }
+    else if (posX>=195 && posY>=0 && posY<130) {
+    posY+=1;                                                            Добавляем по одному к оси Y, а она движет вниз
+    }
+    else if (posX==195 && posY==130) {
+    posY+=65;
+    posX-=65;
+    box.style.width="70px";
+    box.style.height="5px";                         снова добавляем и переворачиваем
+    }
+    else if (posY==195 && posX<=130 && posX>=0) {  
+    posX-=1;                                            убавляем от оси X, двигая обратно влево
+    }
+    else if (posX<=0 && posY==195 && posY>0) {
+    posY-=65;
+    box.style.width="5px";
+    box.style.height="70px";                            добавляем, переворачиваем
+    }
+    else if (posX<=0 && posY<=130 && posY>=0) {
+    posY-=1;                                            убавляем от Y, повышаем
+    }       
+    box.style.left=posX+"px";       в итоге система видит это в css как left: 0px или как то так
+    box.style.top=posY+"px"; 
+    };
+    </script>
+    </body>
+        
+События
+Вы можете написать код на JavaScript, который будет выполняться при возникновении событий, таких как нажатие пользователя на HTML элемент, движение мыши, или подтверждение формы.
+При возникновении события, будет выполнена функция  обработчика. 
+
+
+onclick возникает при щелчке
+onload  при загрузке
+onunload в случае если не загрузиилась страница или закрылась
+onchange при изменении значения элемента формы, вроде текстового поля или списка (<input> <keygen> <select> <textarea>
+onmouseover (hover) когда указатель на элементе
+onmouseout когда указатель за пределами элемента
+onmousedown когда нажимается
+onmouseup когда отпускается лкм
+onblur при потере фокуса
+onfocus при получении элементом фокуса
+
+Можно создать атрибут используя штуки выше
+<div onclick="func()">
+
+Пример
+<button onclick="show()">Click me</button>
+<script>
+function show() {
+    alert("Hi there");
+    }
+</script>
+
+также можно делать так с переменными
+var x=document.getElementById("demo");
+x.onclick=function () {
+    document.body.innerHTML=Date();
+}
+
+Приемник Событий
+
+addEventListener() 
+element.addEventListener("event", function, useCapture);
+
+Первый параметр является типом события(например "click" или "mousedown").
+Второй параметр является функцией, которую мы хотим вызвать при возникновении события.
+Третий параметр является Булевым значением, указывающим в каких случаях использовать всплытие событий и перехват событий. Этот параметр является опциональным.
+тут не нужно использовать on
+
+удалить  обработчик: removeEventListener
+
+ФИГУРЫ))
+
+
+Canvas
+
+графика, используется с js
+width height> </canvas>
+
+как заебала графика
+
+с помощью функции fillRect (x, y, w, h) в js рисуется залитый прямоугольник, w ширина h высота
+по умолчанию черный
+
+var c=document.getElementById("canvas1");
+var ctx=c.getContext("2d");
+ctx.fillRect(20,20,100,100);
+ctx.fillStyle="rgba(0,200,0,1)";    задаёт цвет, градиент, узор заливки
+На холсте в HTML можно рисовать с помощью и других методов:
+
+Нарисовать линию
+moveTo(x,y) - задаёт стартовую точку линии
+lineTo(x,y) - задаёт конечную точку линии
+
+Нарисовать круг 
+beginPath() - начинает рисовать
+arc(x,y,r,start,stop) - задаёт параметры круга
+stroke() - заканчивает рисовать
+
+Градиенты 
+createLinearGradient(х, у, x1, y1) - создаёт объект линейного градиента
+createRadialGradient(x,y,r,x1,y1,r1) - создаёт объект кругового градиента
+
+Нарисовать текст на холсте
+Font - задаёт параметры шрифта
+fillText(text,x,y) - рисует «залитый» текст на холсте
+strokeText(text,x,y) - рисует текст на холсте без заливки
+
+
+Итак, есть Холст, а есть SVG
+
+Холст:
+- объекты рисуются программным способом 
+- рисование на основе пикселей
+- анимация не встроена
+- быстрая обработка операций рисования на основе пикселей
+- нужно принимать во внимание разрешение
+- нет поддержки обработчиков событий
+- возможность сохранить получившееся изображение в формате .png или .jpg 
+- хорошо подходит для игр со сложной графикой
+
+SVG 
+- элементы являются частью модели DOM (объектной модели документа) страницы
+- рисование осуществляется с помощью векторов 
+- встроены эффекты, такие как анимация
+- на основе более понятного стандартного синтаксиса XML
+- не нужно принимать во внимание разрешение
+- реализована поддержка обработчиков событий 
+- не подходит для игровых приложений
+- лучше всего подходит для приложений с большой областью отображения (например, Google Maps)
+
+В итоге что? нахуй холст. svg легче
+
+Работаем дальше  с холстом
+
+canvas можно трансформировать
+
+ctx.font="bold 22px Tahoma";
+ctx.textAlign="start";
+ctx.fillText("start",10,30);
+
+translate(x,y) используется для перемещения холста. x указывает как далеко переместить сетку по гор., y по вертикали
+ctx.translate(100,150);
+ctx.fillText("after translate",10,30);  (нихера не работает)
+
+заебало дайте сертификат
+
+rotate() для вращения холста в радианах
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(10,10, 100, 100);
+
+ctx.rotate( (Math.PI / 180) * 25); //поворот на 25 градусов.
+
+ctx.fillStyle = "#0000FF";
+ctx.fillRect(10,10, 100, 100);
+
+scale() масштабирует 
+scale(1.5,4); 1.5 во сколько раз должно быть масштабировано вдоль оси X
+4 во сколько раз должно быть масштабировано вдоль оси Y
+в результате холст будет масштабирован в 1,5 раза вдоль оси X и в 4 раза вдоль Y
+
+
+Перехват и всплытие
+
+Существует два способа выполнения событий в DOM HTML: всплытие и перехват
+Каждое из выполнений  событий позволяет определять порядок элементов при возникновений событий. <p> находится в <div>, какой из обработчиков будет выполнен первым?
+
+Во всплытии самое глубоко лежащее событие обрабатывается в первую очередь.
+В перехвате наоборот, самое внешнее  событие  
+
+addEventListener() позволяет выполнить тип выполнения с параметром useCapture
+addEventListener() 
+element.addEventListener("event", function, useCapture);
+значением по умолчанию является false, то есть всплытие. если true, то перехват
+
+//capturing propagation (перехват)
+elem1.addEventListener("click", myFunction, true);
+
+//bubbling propagation (всплытие)
+elem2.addEventListener("click", myFunction, false);
+вот так всё тут выглядит
+
+
+
+Создаём слайдер изображений
+
+можно легко сделать это используя button и img
+
+<div>
+ <button onclick="prev()"> Prev  </button>
+ <img id="slider" src="sitebg.jpg" width="200px" height="100px" />
+ <button onclick="next()"> Next </button>
+</div>            //функция по клику onclick
+это html часть
+
+var images =[
+    "https://www.vk.com/deargo/mountain1"      [0]
+    "https://www.vk.com/deargo/mountain2",     [1]
+    "https://www.vk.com/deargo/mountain3"      [2]
+    ];
+    
+var num=0;
+function prev() {                       функция для назад       
+var slider=document.getElementById("slider")
+num--;      num уменьшается с каждым нажатием
+if(num<0) {
+num=images.length-1;
+}
+slider.src=images[num];     сорс слайдера зависит от значения num
+}
+function next() {
+var slider=document.getElementById("slider")
+num++;
+if(num>=images.length) {
+num=0; }
+slider.src=images[num];
+}
+
+
+валидация формы
+
+с HTML5 к полю ввода можно добавить атрибуты по типу required
+Более сложная форма может быть создана с помощью js
+событие onsubmit  можно обработать функцией
+
+<form onsubmit="return validate()" method="post">
+  Number: <input type="text" name="num1" id="num1" />
+  <br />
+  Repeat: <input type="text" name="num2" id="num2" />
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+
+function validate() {
+var n1=document.getElementById("num1");
+var n2=document.getElementById("num2");
+ if (n1.value!= "" && n2.value !="") {   значение первого поля не пустые поля
+ if (n1.value == n2.value) {            одинаковые поля
+    return true;
+    }
+}
+alert("The values should be equal and not blank");
+return false;
+}
+
+
+от будущего значения validate зависит значение того что вернет onsubmit будет ли валдирована форма
+
+
+es6
+var и let
+
+var виден всем и везде
+let только в пределах своего блока кода/функции
+let чаще всего используется в циклах for (let i=9 i<=12 i++) 
+
+const это let, но read only.
+const a="Hello";
+a="Bye";
+выдаст ошибку за посягание на константа!
+
+console.log(msg); это вывод значения переменной
+
+Шаблонные строки
+let name='dave';
+let msg=`Welcome, ${name}`; это шаблонная строка
+вместо let msg="Welcome, " + "${name}";
+также используем обратные кавычки ` (там где тилда) а не " или '
+
+также внутри  ${} можно делать математику ${a+b}
+
+<div id="name"> незя
+<div id={user.id}> мона
+

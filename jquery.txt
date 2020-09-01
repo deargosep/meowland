@@ -1,0 +1,35 @@
+
+        
+    jquery
+    Это библиотека js, удобная и коротит время разработки
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> в <head>
+
+     $(function() {
+      //jquery code   
+      });
+эта херь не даёт активироваться библиотеке пока html не загрузится полностью
+
+менять html с помощью него легче: $("id").html/.css("width", "1px"); как то так
+
+Селекторы
+выбрать;
+$("p") это выбирает все теги <p>
+$(".demo") class="demo"
+$("#demo") id="demo"
+
+также 
+$("div.menu") все теги <div> с class="menu"
+$("p:first") первый тег <p> в документе
+$("h1, p") все <h1> и все <p>
+$("div p") все <p> элементы которые под <div>
+$("*") все элементы документа
+        это всё заменяет  document.getElementById и тд
+
+$("#demo p") выбирает все p которые потомки тега с id="demo"
+
+
+функция show()
+
+
+ 

@@ -1,0 +1,358 @@
+Заметка для HTML и CSS
+https://meowlandofdeargo.000webhostapp.com/
+<html> </html> это всё
+<head> это то что содержит <title>
+<body> это основа
+<!-- это комментарий -->
+<h1> <h2> <h3> <h4> и тд это заголовки
+<hr /> сделать линию. вписать в строку нельзя ничего
+<hr width="50%"/"50px"> ширина, линии можно добавить align=""
+    height
+<br />  новая строка без пробела
+<p> </p> новая строка с пробелом
+<p align="left/right/center"> </p> настройки <p>
+<img src="url.jpg" /> добавить фотографию. alt="" описание. можно добавить height, width, border=рамка
+<a href=""> <img src="" alt=""> </a> ссылка на изображение
+<a href="">Текст!!</a> ссылка+текст 
+<a href="" target=""> </a> открыть в новой вкладке "_blank" 
+<a href=""> </a> оригинал ссылка
+style="text-decoration:none" убирает подпись под ссылкотекстами 
+<ol> нумерованный <ul> ненумерованный списки
+<li> </li>
+</ol> </ul>
+<div> можно использовать для параметров align ...
+<table border="1"> таблица примерно как в списках с гранями
+<tr>
+<td></td> 
+</tr> конец первого ряда горизонтально
+<tr>
+<td>
+<td colspan="3"> рамки на втором ряду под первым
+</table> не забыть, конец таблицы
+bgcolor color="color" цвета
+<style> css
+body {
+background-color: #fefefe;
+}
+<form action="/"> форма для заполнения. в "" ссылка куда направится. method get/post, get для получения, post для отправки
+инфа и пользователь
+<input type="text/password/submit" name="" value="внешний текст" />. кончается без повторного <>
+<!-- конец первого модуля -->
+
+
+HTML5
+<audio src="" controls> можно добавить autoplay. тут текст на случай неработающих аудио </audio>
+<video> так же
+
+<progress min max value> строка загрузки, если неправильно указать/не указать то будет бесконечно загружающаяся
+
+js apis
+
+STORAGE API
+-sessionStorage() данные одноразовые
+-localStorage() данные без ограничения по времени. хранилище
+Сохранить значения (js)
+localStorage.setItem("key1", "value1"); ключ первый (приватность?) значение второе
+Показать
+alert(localStorage.getItem("key1"));
+Удаление значения
+localStorage.removeItem("key1");
+Очистка
+localStorage.clear()
+    var val=prompt("make a def");
+    var key=prompt("make a key");
+    localStorage.setItem(key,val);
+    alert(localStorage.getItem(key));
+    выведет val
+
+GPS API
+navigator.geolocation.getCurrentPosition();
+параметры showLocation получает инфу о местоположении
+ErrorHandler действует при ошибке
+Options параметры получения инфы
+
+<img draggable="true" /> делает объект перетаскиваемым
+
+хуйня бесполезная
+
+
+Векторы SVG
+
+векторные изображения можно вставить как обычные
+<svg> тег вектора. ща будем рисовать
+<svg width="1000" height="1000"></svg>  в теге указывается зона фигуры
+<circle cx="80" cy="80" r="50" fill="green" /> круг
+cx центр круга - ось X вправо
+cy центр круга - ось Y вниз
+r задаёт радиус
+fill заполняет цветом
+stroke для контура
+
+<svg width="1000" height="300">
+<rect width="300" height="100"      прямоугольник
+x="20" y="20" fill="green" />
+</svg>
+здесь обычные x и y
+
+<svg width="400" height="410">
+<line x1="10" y1="10" x2="200" y2="100"
+    style="stroke:#000000; stroke-linecap:round;
+    stroke-width:20" /> </svg>
+это линия. stroke определял рамки 
+x1, y1 это координаты начала линии в svg
+x2 y2 это концы линии
+<polyline> это фигуры с несколькими отрезками линий (углы, полилинии)
+
+<svg width="2000" height="500">
+   <polyline style="stroke-linejoin:miter; stroke:black; 
+      stroke-width:12; fill: none;"
+      points="100 100, 150 150, 200 100" />
+</svg>
+
+Points - координаты ломанной линии.
+это нарисует черную галочку
+
+
+Элементы <ellipse> и <polygon>
+
+Эллипс
+Элемент <ellipse> пишется так же, как <circle>, с той лишь разницей, что: 
+Вы можете отдельно задавать координаты горизонтальной и вертикальной осей радиуса эллипса - с помощью атрибутов rx и ry.
+<svg height="500" width="1000">
+   <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
+</svg>
+
+Многоугольник
+Элемент <polygon> используется для создания фигур с не менее, чем тремя сторонами. Элемент polygon стоит особняком, потому что он может автоматически замыкать фигуру.
+<svg width="2000" height="2000">
+<polygon points="100 100, 200 200, 300 0" 
+   style="fill: green; stroke:black;" />
+</svg>
+
+Траектории
+Элемент <path> используется для указания траектории
+
+с ним можно юзать
+M:moveto
+L:lineto
+H:horizontal lineto
+V:vertical lineto
+C:curveto
+S:smooth curveto
+Q:quadratic Bezier curve 
+T:smooth quadratic Bezier curveto
+A:elliptical Arc
+z:closepath
+
+траекторию указываем атрибутом d:
+<svg width="500" height="500">
+<path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000; fill:none;" />
+</svg>
+
+М устанавливает нашу "виртуальную ручку" в положение (0,0). "Ручка" затем двигается по диагонали вниз и вправо на 200 пикселей, затем вверх в положение (200,0). Команда Z замыкает фигуру, создаётся гипотенуза                
+                                                _______________________
+                                                \                     |
+                                                 \                    |
+                                                  \                   |
+                                                   \                  |
+                                                    \                 |
+                                                     \                |
+                                                      \               |
+                                                       \              |
+                                                        \             |
+                                                         \            |
+                                                          \           |
+                                                           \          |
+                                                            \         |
+                                                             \        |
+                                                              \       |
+                                                               \      |
+                                                                \     |
+                                                                 \    |
+                                                                  \   |
+                                                                   \  |
+                                                                    \ |
+                                                                     \|
+                                                                     
+Canvas
+
+графика, используется с js
+width height> </canvas>
+
+как заебала графика
+
+с помощью функции fillRect (x, y, w, h) в js рисуется залитый прямоугольник, w ширина h высота
+по умолчанию черный
+
+var c=document.getElementById("canvas1");
+var ctx=c.getContext("2d");
+ctx.fillRect(20,20,100,100);
+ctx.fillStyle="rgba(0,200,0,1)";    задаёт цвет, градиент, узор заливки
+На холсте в HTML можно рисовать с помощью и других методов:
+
+Нарисовать линию
+moveTo(x,y) - задаёт стартовую точку линии
+lineTo(x,y) - задаёт конечную точку линии
+
+Нарисовать круг 
+beginPath() - начинает рисовать
+arc(x,y,r,start,stop) - задаёт параметры круга
+stroke() - заканчивает рисовать
+
+Градиенты 
+createLinearGradient(х, у, x1, y1) - создаёт объект линейного градиента
+createRadialGradient(x,y,r,x1,y1,r1) - создаёт объект кругового градиента
+
+Нарисовать текст на холсте
+Font - задаёт параметры шрифта
+fillText(text,x,y) - рисует «залитый» текст на холсте
+strokeText(text,x,y) - рисует текст на холсте без заливки
+
+
+Итак, есть Холст, а есть SVG
+
+Холст:
+- объекты рисуются программным способом 
+- рисование на основе пикселей
+- анимация не встроена
+- быстрая обработка операций рисования на основе пикселей
+- нужно принимать во внимание разрешение
+- нет поддержки обработчиков событий
+- возможность сохранить получившееся изображение в формате .png или .jpg 
+- хорошо подходит для игр со сложной графикой
+
+SVG 
+- элементы являются частью модели DOM (объектной модели документа) страницы
+- рисование осуществляется с помощью векторов 
+- встроены эффекты, такие как анимация
+- на основе более понятного стандартного синтаксиса XML
+- не нужно принимать во внимание разрешение
+- реализована поддержка обработчиков событий 
+- не подходит для игровых приложений
+- лучше всего подходит для приложений с большой областью отображения (например, Google Maps)
+
+В итоге что? нахуй холст. svg легче
+
+Работаем дальше  с холстом
+
+canvas можно трансформировать
+
+ctx.font="bold 22px Tahoma";
+ctx.textAlign="start";
+ctx.fillText("start",10,30);
+
+translate(x,y) используется для перемещения холста. x указывает как далеко переместить сетку по гор., y по вертикали
+ctx.translate(100,150);
+ctx.fillText("after translate",10,30);  (нихера не работает)
+
+заебало дайте сертификат
+
+rotate() для вращения холста в радианах
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(10,10, 100, 100);
+
+ctx.rotate( (Math.PI / 180) * 25); //поворот на 25 градусов.
+
+ctx.fillStyle = "#0000FF";
+ctx.fillRect(10,10, 100, 100);
+
+scale() масштабирует 
+scale(1.5,4); 1.5 во сколько раз должно быть масштабировано вдоль оси X
+4 во сколько раз должно быть масштабировано вдоль оси Y
+в результате холст будет масштабирован в 1,5 раза вдоль оси X и в 4 раза вдоль Y
+
+
+бляяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя
+
+Формы в HTML5
+Формы для заполнения. Не фигуры. Спокойствие
+<form>  форма
+ <label>Ваше имя:</label>           label это пометка
+ <input id="user" name="username" type="text" />    input это ввод
+ </form>    форма
+
+ атрибут novalidate даёт избежать проверки формы при отправке
+<input placeholder-"email@mail.com" /> текст который серый внутри формы, не value к счастью
+autofocus в том же input ставит курсор в нужное поле после загрузки формы (без =)
+requireD="true" говорит браузеру, что заполнять обязательно
+<input type="submit" value="submit" Это кнопка для отправки
+В HTML5 добавлены новые поля ввода input type:
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+Новые атрибуты полей ввода в HTML5:
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+
+
+Окно поиска
+
+<input id="mysearch" name="searchItem" type="search" />
+не забудьте name для отправления (что?)
+
+Параметры
+
+<datalist id="colors">
+    <option value="Красный">
+
+</datalist>                 с помощью option создаются варинты выбора
+
+<form>
+<input type="text" name="color" list="colors" />   list для списка (название и id)
+<datalist id="colors">
+    <option value="Красный">    
+    <option value="Зелёный">
+    <option value="Желтый">
+</datalist>
+</form>             вот и список
+
+name атрибут вставляется в строку позже  с результатом
+type для password, email, url, tel, submit (для кнопок отправки)
+ещё for="email"
+placeholder для серого текста внутри (вместо value)
+Типы полей ввода облегчают сортировку и проверку данных в HTML формах
+
+
+
+Конец курса HTML в Sololearn
+
+Для вставки видер используем <video>
+<canvas> Для рисовки, можно сохранить, пиксельное
+<nav> содержит данные навигации (навбар)
+sessionStorage хранит данные на протяжении одной сессии
+
+<svg width="100" height="100">
+ <line x1="50" y1="0" x2="50" y2="100"
+ style="stroke:black" />
+ <line x1="0" y1="50" x2="100" y2="50"
+ style="stroke:black" />
+ </svg> 
+ этот код делает черный маленький знак плюса
+ 
+ autocomplete автозаполняет форму, можно true или false
+ 
+ 

@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, inptimeh, inptimem, outtime;
+    cout<<"hello. your time is am or pm? Type 0 for am and 1 for pm"<<endl;
+    cin>>a;
+    if (a == 0) {
+        cout<<"OK. Your current time is AM. Please write it. First hours, then minutes"<<endl;
+        cin>>inptimeh>>inptimem;
+        outtime=inptimeh+12;
+        if (outtime<24) {
+            cout<<"Your time is: "<<outtime<<":"<<inptimem;
+        }
+        else if (outtime>24) {
+            cout<<"Sorry, it's not AM time. Try again."<<endl;
+            cin>>inptimeh>>inptimem;
+        }
+        else if (outtime=24) {
+            cout<<"Your time is: "<<"0:"<<inptimem;
+        }
+    }
+    else if (a == 1)
+    {
+        cout<<"OK. Your current time is PM. Please write it. First hours, then minutes"<<endl;
+        cin>>inptimeh>>inptimem;
+        cout<<"Your time is: "<<inptimeh<<":"<<inptimem;
+    }
+    else {
+            cout<<"System aborted.";
+            return 0;
+    }
+    return 0;
+}
+ 
